@@ -3,18 +3,16 @@ html {
 }
 body {
   font-size: 1.4rem;
+  padding: 0.5rem;
 }
 
 section.wrapper {
-  min-width: 100%;
-  padding: 0.5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 .square {
-  box-sizing: border-box;
   flex-grow: 1;
   flex-basis: 100%;
   aspect-ratio: 1/1;
@@ -25,6 +23,7 @@ section.wrapper {
   position: absolute;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .text-content img {
@@ -36,15 +35,15 @@ section.wrapper {
   z-index: -1;
 }
 figcaption {
-  display: none;
   height: 4rem;
-  margin-block-start: -4rem;
-  background-color: rgba(1, 1, 1, 0.54);
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  font-family: sans-serif;
   width: 100%;
+  margin-block-start: 0;
+  background-color: rgba(1, 1, 1, 0.54);
+  font-family: sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -52,10 +51,7 @@ figcaption {
   transition: all 0.3s ease-out;
 }
 figure:hover figcaption {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+  margin-block-start: -4rem;
 }
 
 /* TABLET */
@@ -84,6 +80,5 @@ figure:hover figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
   }
 }
